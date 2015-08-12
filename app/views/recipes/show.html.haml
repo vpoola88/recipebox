@@ -1,0 +1,36 @@
+#show-hero
+  .hero
+    .container
+      .row
+        .col.s12.center-align
+          %h2= @recipe.title
+.recipe-info
+  .container
+    .row
+      .col.s6
+        %img.responsive-img.z-depth-2{ :src => @recipe.image }
+      .col.s6
+        .recipe-text
+          %h5= @recipe.title
+          %p= @recipe.description
+          %p= image_tag @recipe.user.gravatar_url 
+          %p= @recipe.user.email
+
+    %br
+    .row
+      .col.s6
+        .recipe-text
+          %h5 Ingredients
+          - @recipe.ingredients.each do |ingredient|
+            %p= ingredient.name
+      .col.s6
+        .recipe-text
+          %h5 Directions
+          - @recipe.directions.each do |direction|
+            %ul
+              %li= direction.step
+    .row
+      .col.s12.center-align
+        %br
+        =link_to "Edit", edit_recipe_path, class: "btn"
+        =link_to "Delete", recipe_path, method: :delete, data: { confirm: "Are you sure?"}, class: "btn"

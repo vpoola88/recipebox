@@ -1,0 +1,29 @@
+
+= form_for @recipe, html: { multipart: true } do |f|
+  = label_tag("Title")
+  = f.text_field :title
+  = label_tag("Description")
+  = f.text_field :description
+  = label_tag("Image")
+  = f.file_field :image
+  %br
+  %br
+  .row
+    .col.s6.center-align
+      .nested
+        = f.nested_fields_for :ingredients do |ff|
+          = ff.remove_nested_fields_link
+          = ff.text_field :name
+        = f.add_nested_fields_link :ingredients, 'Add Ingredient', class: "btn", role: "button"
+    .col.s6.center-align
+      .nested
+        = f.nested_fields_for :directions do |ff|
+          = ff.remove_nested_fields_link
+          = ff.text_field :step
+        = f.add_nested_fields_link :directions, 'Add Step', class: "btn", role: "button"
+
+  .row
+    .col.s12.center-align
+      %br
+      %br
+      =f.submit "Add Recipe!", class: "btn btn-large"

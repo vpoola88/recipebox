@@ -1,0 +1,39 @@
+#home-hero
+  .hero
+    .container
+      .row
+        .col.s12.center-align
+          %h2 Find Your Recipe
+      .row
+        .col.s12.center-align
+          %form
+            .input-field
+              %input#search{:required => "", :type => "search"}
+                %label{:for => "search"}
+                  %i.material-icons search
+      .row
+        .col.s12.center-align
+          = link_to 'Add A Recipe', new_recipe_path, class: "btn btn-large orange darken-1 recipe-btn"
+
+#allrecipes
+  %br
+  .container
+    - @recipes.each_slice(3) do |recipes|
+      .row
+        - recipes.each do |recipe|
+          .col.s4
+            .card
+              .card-image.waves-effect.waves-block.waves-light
+                %img.activator.responsive-img{:src => recipe.image}
+              .card-content
+                %span.card-title.activator.grey-text.text-darken-4
+                  = recipe.title
+
+                  %i.material-icons.right more_vert
+                %p
+                  %a{:href => "recipes/#{recipe.id}"} View Recipe
+              .card-reveal
+                %span.card-title.grey-text.text-darken-4
+                  = recipe.title
+                  %i.material-icons.right close
+                %p= recipe.description

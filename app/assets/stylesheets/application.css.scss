@@ -1,0 +1,182 @@
+@import url(http://fonts.googleapis.com/css?family=Teko:400,500);
+@import url(http://fonts.googleapis.com/css?family=Oswald);
+@import "materialize";
+
+body{
+  background: #e9e9e9;
+} 
+
+#home-hero {
+  background: url('http://www.perfectionisnthappy.com/wp-content/uploads/2014/03/crab_cakes_with_spinach_ingredients.jpg')no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+#new-hero {
+  background: url('http://carpeseason.com/wp-content/uploads/2012/11/gluten-free-stuffing-ingredients.jpg')no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+#show-hero {
+  background: url('https://rusticchef.files.wordpress.com/2014/11/spring-roll-ingredients.jpg')no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+#edit-hero {
+  background: url('http://www.oola.com/includes/images/backgrounds/ingredients.jpg')no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.signup-hero {
+  background: url('http://www.sobold.co.uk/wp-content/uploads/2015/02/matt-blue.jpg')no-repeat;
+  background-size: cover;
+  background-position: center;  
+}
+
+.signin-hero {
+  background: url('http://i.imgur.com/QKJsWN8.jpg')no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.hero {
+  background: rgba(0,0,0,0.2);
+  padding: 150px 0px;
+
+  h2 {
+    color: #fff;
+    text-transform: uppercase;
+    font-family: 'Teko', sans-serif;
+    font-size: 5em;
+  }
+  .input-field label {
+    color: #FFF;
+  }
+  .input-field label.active {
+    transform: translateY(0%);
+    color: #000;
+  }
+
+  .input-field input[type=search] {
+    background: rgba(255,255,255,0.4);
+    border-bottom: none;
+
+    &:active, &:focus {
+      background: rgb(255,255,255);
+    }
+  }
+}
+
+.user-hero {
+  background: rgba(0,0,0,0.2);
+  padding: 75px 0px;
+
+  h2 {
+    color: #fff;
+    text-transform: uppercase;
+    font-family: 'Teko', sans-serif;
+    font-size: 5em;
+  }
+}
+
+
+
+.recipe-image {
+  padding:100px 0px;
+  border: 1px solid black;
+
+  label {
+    display: none;
+  }
+  input {
+    color: transparent;
+  }
+  input:before{
+    content: 'Add Image';
+    color: #FFF;
+    padding: 0px 20px;
+  }
+
+  .btn {
+    width: 70%;
+  }
+}
+
+.recipe-description {
+  textarea.materialize-textarea:focus, input[type=text]:focus {
+    border-bottom: 1px solid #000;
+    box-shadow: 0 1px 0 0 #000;
+  }
+  .input-field label.active {
+        transform: translateY(0%);
+  }
+  textarea.materialize-textarea, &:focus {
+    border: 1px solid black;
+    padding: 20px;
+    border-bottom: 1px solid black;
+  }
+}
+
+
+.navbar-fixed {
+    height: 0px;
+}
+
+nav {
+  background: transparent !important;
+}
+
+fieldset {
+  border: none;
+}
+
+.recipe-info {
+  padding: 40px 0px;
+  h5 {
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
+  }
+}
+
+.recipe-text {
+  background: #FFF;
+  padding: 40px;
+}
+
+.nested {
+  background-color: #fff;
+  padding: 40px;
+}
+
+#signup {
+  .form-inputs {
+    label { 
+      display: none; 
+    }
+  }
+  .signupform {
+    padding: 20px 0px;
+    margin-top: 40px;
+  }
+}
+
+
+.recipe-btn {
+    height: 50px;
+    line-height: 26px;
+    font-weight: bold;
+    padding: 14px 80px;
+}
+
+.nav-wrapper {
+  .btn {
+    margin-right: 15px;
+  }
+}
+
+nav ul li:hover, nav ul li.active {
+  background-color: transparent !important;
+}
